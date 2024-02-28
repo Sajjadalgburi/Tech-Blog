@@ -14,3 +14,18 @@ const oneDayInMilliseconds = 24 * 60 * 60 * 1000; // Number of milliseconds in o
 const maxAgeInDays = 3; // Number of days you want the session to last
 
 const app = express();
+
+const sess = {
+  secret: process.env.SESSION_SECRET,
+  cookie: {
+    maxAge: oneDayInMilliseconds * maxAgeInDays,
+    httpOnly: true,
+    secure: false, // Change to true if serving over HTTPS
+    sameSite: 'strict',
+  },
+  resave: false,
+  saveUninitialized: true,
+  store: new SequelizeStore({
+    db: sequelize,
+  }),
+};
