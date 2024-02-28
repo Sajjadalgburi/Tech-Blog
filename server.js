@@ -12,3 +12,5 @@ dotenv.config();
 const PORT = process.env.PORT || 3001;
 const oneDayInMilliseconds = 24 * 60 * 60 * 1000; // Number of milliseconds in one day
 const maxAgeInDays = 3; // Number of days you want the session to last
+
+const app = express();
