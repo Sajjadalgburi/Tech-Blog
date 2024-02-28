@@ -5,3 +5,6 @@ const exphbs = require('express-handlebars');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 const sequelize = require('./config/connection');
 const dotenv = require('dotenv');
+
+// Load environment variables from .env file
+dotenv.config();
