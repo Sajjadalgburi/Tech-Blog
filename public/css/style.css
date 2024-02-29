@@ -23,3 +23,11 @@ body {
   background: var(--headerBg); /* Set header background color */
   color: #fff; /* Set text color */
 }
+
+/* Navbar Styles */
+.navbar {
+  font-family: 'Roboto', sans-serif; /* Set font family */
+  text-transform: uppercase; /* Transform text to uppercase */
+  text-decoration: none; /* Remove text decoration */
+  font-size: 1.3rem; /* Set font size */
+}
