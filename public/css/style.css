@@ -31,3 +31,20 @@ body {
   text-decoration: none; /* Remove text decoration */
   font-size: 1.3rem; /* Set font size */
 }
+
+/* Navbar List Styles */
+.navbar ul {
+  display: inline-flex; /* Set display to inline flex */
+}
+
+.navbar ul li {
+  margin: 0 35px; /* Set margin for list items */
+}
+
+/* Link Styles */
+.navbar ul li a,
+.h1El a {
+  transition: 0.2s; /* Set transition duration */
+  color: #fff; /* Set link color */
+  text-decoration: none; /* Remove text decoration */
+}
