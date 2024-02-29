@@ -7,3 +7,13 @@
   --seccondary: #d1bda1; /* Secondary color */
   --bg: #272c33; /* Background color */
 }
+
+/* Body Styles */
+body {
+  background-color: var(--seccondary); /* Set background color */
+  background-image: radial-gradient(
+    #161616 1.4px,
+    #d1bda1 1.4px
+  ); /* Set background image as radial gradient */
+  background-size: 28px 28px; /* Set background size */
+}
