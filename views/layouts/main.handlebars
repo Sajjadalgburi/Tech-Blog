@@ -1,44 +1,70 @@
-<!DOCTYPE html>
-<html lang="en">
+<html lang='en'>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset='UTF-8' />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
     <title>Tech Blog</title>
-    <!-- Link to Bootstrap CSS file -->
-    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../../public/css/jass.css">
-    <link rel="stylesheet" href="../../public/css/style.css">
-</head>
+    <!-- Bootstrap CSS -->
+    <link
+      rel='stylesheet'
+      href='https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css'
+    />
+    <link rel='stylesheet' href='/css/jass.css' />
+    <link rel='stylesheet' href='/css/style.css' />
+  </head>
 
-<body>
-    <div class="flex-column justify-space-around">
-        <header class="display-flex justify-space-between align-center p-2">
-            <h1></h1>
-            <nav>
-                <!-- Conditionally render login or logout links -->
-                {{#if logged_in}}
-                <a href="/profile">profile</a> |
-                <button class="no-button" id="logout">logout</button>
-                {{else}}
-                <a href="/login">login</a>
-                {{/if}}
-            </nav>
-        </header>
-        <main class="container container-fluid mt-5">
-            <!-- Render the sub layout -->
-            {{{ body }}}
-        </main>
-        <footer>
+  <body>
+    <div class='header container-fluid p-4'>
+      <div class='row'>
+        <nav class='navbar col-12 col-md-10'>
+          <ul>
+            <!-- Added Bootstrap classes 'row col-5' -->
+            <li><a href='/'>Home</a></li>
+            <li><a href='/dashboard'>Dashboard</a></li>
+            <li>
+              <!-- Conditionally render login or logout links -->
+              {{#if logged_in}}
+                <a href='/profile'>Profile</a>
+                |
+                <button id='logout'>Logout</button>
+              {{else}}
+                <a href='/login'>Login</a>
+              {{/if}}
+            </li>
+          </ul>
+        </nav>
+        <div
+          class='col-12 col-md-2 text-center box d-flex justify-content-center'
+        >
+          <!-- Added Bootstrap classes 'd-flex justify-content-center' -->
+          <h1 class='fs-3 h1El text-uppercase'><a href='/'>The Tech Blog</a></h1>
+        </div>
 
-        </footer>
+      </div>
+
     </div>
 
+    <main class='container-fluid mt-5'>
+      <!-- Render the sub layout -->
+      {{{body}}}
+    </main>
+
+    <footer></footer>
+    <!-- Bootstrap JS, jQuery, and Popper.js -->
+    <script
+      src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js'
+    ></script>
+    <script
+      src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js'
+    ></script>
+    <script
+      src='https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js'
+    ></script>
 
     <!-- Render script for logged in users only -->
     {{#if logged_in}}
-    <script src=""></script>
+      <script src=''></script>
     {{/if}}
-</body>
+  </body>
 
 </html>
