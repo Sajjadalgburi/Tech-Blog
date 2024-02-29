@@ -48,3 +48,13 @@ body {
   color: #fff; /* Set link color */
   text-decoration: none; /* Remove text decoration */
 }
+
+/* Hover Effect for Header Links */
+.h1El a:hover {
+  color: #d1bda1; /* Change text color on hover */
+}
+
+/* Hover Effect for Navbar Links */
+.navbar ul li a:hover {
+  color: #d1bda1; /* Change text color on hover */
+}
