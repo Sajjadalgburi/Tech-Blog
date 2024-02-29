@@ -58,3 +58,23 @@ body {
 .navbar ul li a:hover {
   color: #d1bda1; /* Change text color on hover */
 }
+
+.login {
+  color: #fff;
+  background-color: var(--bg);
+  box-shadow: 15px 30px 0px #fff;
+  transition:
+    background-color 0.7s,
+    box-shadow 0.7s,
+    color 0.7s; /* Adding transition for smoother effect */
+}
+
+#signup-link {
+  font-size: 1rem;
+}
+
+.login:hover {
+  background-color: #fff;
+  box-shadow: -15px 30px 0px var(--bg);
+  color: black;
+}
