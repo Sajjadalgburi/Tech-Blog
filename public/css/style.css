@@ -17,3 +17,9 @@ body {
   ); /* Set background image as radial gradient */
   background-size: 28px 28px; /* Set background size */
 }
+
+/* Header Styles */
+.header {
+  background: var(--headerBg); /* Set header background color */
+  color: #fff; /* Set text color */
+}
