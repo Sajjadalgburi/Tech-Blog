@@ -5,6 +5,7 @@ const exphbs = require('express-handlebars');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 const sequelize = require('./config/connection');
 const dotenv = require('dotenv');
+const routes = require('./controllers');
 
 // Load environment variables from .env file
 dotenv.config();
@@ -40,6 +41,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(session(sess));
+app.use(routes);
 
 // Database synchronization
 sequelize.sync({ force: false }).then(() => {
