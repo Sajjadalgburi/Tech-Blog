@@ -82,3 +82,20 @@ body {
 .container {
   margin-bottom: 6rem;
 }
+
+/* Media query for screens 540px or below */
+@media (max-width: 540px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start; /* Adjust alignment as needed */
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: flex-start; /* Adjust alignment as needed */
+  }
+
+  nav ul li {
+    margin-bottom: 40px;
+  }
+}
