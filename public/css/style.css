@@ -60,9 +60,9 @@ body {
 }
 
 .login {
-  color: #fff;
-  background-color: var(--bg);
-  box-shadow: 15px 30px 0px #fff;
+  color: black;
+  background-color: #fff;
+  box-shadow: 15px 30px 0px grey;
   transition:
     background-color 0.7s,
     box-shadow 0.7s,
@@ -77,4 +77,8 @@ body {
   background-color: #fff;
   box-shadow: -15px 30px 0px var(--bg);
   color: black;
+}
+
+.container {
+  margin-bottom: 6rem;
 }
