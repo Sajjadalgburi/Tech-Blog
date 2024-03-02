@@ -104,7 +104,7 @@ body {
   color: #fff;
   background-color: var(--bg);
   border-radius: 15px;
-  box-shadow: -25px 40px 0px #fff;
+  box-shadow: 25px 40px 0px #fff;
 }
 
 .createPostHeader {
