@@ -13,4 +13,14 @@ Post.belongsTo(User, {
 });
 // ! Association #1
 
+// * Association #2
+Post.hasMany(Comment, {
+  foreignKey: 'postId',
+  onDelete: 'CASCADE',
+});
+
+Comment.belongsTo(Post, {
+  foreignKey: 'postId',
+});
+// * Association #2
 module.exports = { User, Post, Comment };
