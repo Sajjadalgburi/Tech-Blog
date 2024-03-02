@@ -111,3 +111,25 @@ body {
   font-size: 3rem;
   text-align: center;
 }
+
+#newPostButton {
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  transition:
+    background-color 0.4s,
+    color 0.4s,
+    box-shadow 0.4s; /* Include box-shadow in the transition */
+  height: 40px;
+  font-weight: 600; /* Corrected font-weight */
+  width: 190px;
+  color: #fff;
+  border-radius: 10px;
+  background-color: var(--headerBg);
+}
+
+#newPostButton:hover {
+  background-color: var(--seccondary);
+  color: #fff;
+  box-shadow: 0 0 10px 2px #fff; /* Add a box-shadow to create the highlight effect */
+  outline: 2px solid transparent; /* Add transparent outline */
+}
