@@ -41,8 +41,38 @@ User.init(
       },
     },
   },
-
   {
+    hooks: {
+      beforeCreate: async (newUserData) => {
+        try {
+          newUserData.email = await newUserData.email.toLowerCase();
+
+          newUserData.password = await bcrypt.hash(newUserData.password, 15);
+          return newUserData;
+        } catch (err) {
+          console.error(err);
+        }
+      },
+
+      beforeUpdate: async (updateUserData) => {
+        try {
+          if (updateUserData.email) {
+            updateUserData.email = await updateUserData.email.toLowerCase();
+          }
+
+          if (updateUserData.password) {
+            updateUserData.password = await bcrypt.hash(
+              updateUserData.password,
+              15,
+            );
+          }
+          return updateUserData;
+        } catch (err) {
+          console.error(err);
+        }
+      },
+    },
+
     sequelize,
     timestamps: false,
     freezeTableName: true,
