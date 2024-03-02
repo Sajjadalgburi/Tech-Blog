@@ -99,3 +99,15 @@ body {
     margin-bottom: 40px;
   }
 }
+
+.create-post {
+  color: #fff;
+  background-color: var(--bg);
+  border-radius: 15px;
+  box-shadow: -25px 40px 0px #fff;
+}
+
+.createPostHeader {
+  font-size: 3rem;
+  text-align: center;
+}
