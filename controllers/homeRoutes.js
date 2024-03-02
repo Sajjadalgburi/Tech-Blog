@@ -1,4 +1,5 @@
 const router = require('express').Router();
+const withAuth = require('../utils/auth');
 
 // GET method for all posts made
 router.get('/', async (req, res) => {
@@ -6,7 +7,7 @@ router.get('/', async (req, res) => {
 });
 
 // GET method for user dashboard
-router.get('/dashboard', async (req, res) => {
+router.get('/dashboard', withAuth, async (req, res) => {
   res.render('dashboard');
 });
 
