@@ -5,6 +5,11 @@ router.get('/', async (req, res) => {
   res.render('homepage');
 });
 
+// GET method for user dashboard
+router.get('/dashboard', async (req, res) => {
+  res.render('dashboard');
+});
+
 // GET method for login route
 router.get('/login', (req, res) => {
   // If the user is already logged in, redirect the request to another route
