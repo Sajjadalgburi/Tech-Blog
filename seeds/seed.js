@@ -21,4 +21,7 @@ const seedDatabase = async () => {
 
   // Seeding Users with Hashed Passwords
   const users = await User.bulkCreate(hashedUserData, { returning: true }); // Insert hashed user data into database
+
+  // Seeding Posts
+  const posts = await Post.bulkCreate(postData, { returning: true }); // Insert post data into database
 };
