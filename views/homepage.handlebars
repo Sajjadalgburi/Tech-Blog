@@ -1,0 +1,13 @@
+{{#each posts as |post|}}
+  <div class='col-12 col-md-8 col-lg-8 post'>
+    <div class='card mb-5'>
+      <div class='postHeader'>
+        {{post.title}}
+      </div>
+      <div class='card-body p-2'>
+        <h6 class='card-title'>Posted by {{post.user.first_name}} on DATE</h6>
+        <p class='card-text'>{{post.commentTexts}}</p>
+      </div>
+    </div>
+  </div>
+{{/each}}
