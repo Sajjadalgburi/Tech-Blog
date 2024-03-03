@@ -27,4 +27,10 @@ const seedDatabase = async () => {
 
   // Seeding Comments
   await Comment.bulkCreate(commentData); // Insert comment data into database
+
+  // Log success message
+  console.log('Database seeded successfully!');
+
+  // Exit the process
+  process.exit(0);
 };
