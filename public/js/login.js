@@ -27,4 +27,4 @@ const logInFormHandler = async (event) => {
 // Event listener for form submission
 document
   .querySelector('#submit-button')
-  .addEventListener('submit', logInFormHandler);
+  .addEventListener('click', logInFormHandler);
