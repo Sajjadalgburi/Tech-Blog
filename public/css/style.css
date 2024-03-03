@@ -133,3 +133,35 @@ body {
   box-shadow: 0 0 10px 2px #fff; /* Add a box-shadow to create the highlight effect */
   outline: 2px solid transparent; /* Add transparent outline */
 }
+
+/* Centering the post */
+.post {
+  margin: auto;
+  max-width: 1000px;
+}
+
+/* Centering the post header */
+.postHeader {
+  text-align: center;
+  color: var(--seccondary);
+  padding: 10px;
+  font-size: 1.5rem;
+  background-color: var(--headerBg);
+  font-weight: 800;
+}
+
+.card {
+  box-shadow: -15px 20px 0 #fff;
+  background-color: #272c33;
+}
+
+.card-title {
+  text-align: right;
+  color: gray;
+  font-size: 0.9rem;
+}
+
+.card-text {
+  font-weight: 500;
+  color: #fff;
+}
