@@ -1,9 +1,36 @@
 const router = require('express').Router();
 const withAuth = require('../utils/auth');
+const { User, Post, Comment } = require('../models');
 
-// GET method for all posts made
+// GET method for retrieving all posts along with associated user information and comments
 router.get('/', async (req, res) => {
-  res.render('homepage', { logged_in: req.session.logged_in });
+  try {
+    // Retrieve all post data along with associated user and comment information
+    const postData = await Post.findAll({
+      include: [
+        { model: User, attributes: ['first_name'] }, // Include user's first name
+        { model: Comment, attributes: ['text'] }, // Include comment text
+      ],
+    });
+
+    // Map post data to extract necessary information
+    const posts = postData.map((data) => {
+      const post = data.get({ plain: true });
+      // Extracting text of each comment for the post
+      post.commentTexts = post.comments.map((comment) => comment.text);
+      return post;
+    });
+
+    // Log the retrieved posts
+    console.log(posts);
+
+    // Render homepage with retrieved posts and login status
+    res.render('homepage', { posts, logged_in: req.session.logged_in });
+  } catch (err) {
+    // Handle errors
+    console.error(err);
+    res.status(500).json(err);
+  }
 });
 
 // GET method for user dashboard
