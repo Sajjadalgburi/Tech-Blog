@@ -58,4 +58,24 @@ router.post('/login', async (req, res) => {
   }
 });
 
+// Route for handling logout requests
+router.post('/logout', (req, res) => {
+  try {
+    // Check if the user is logged in
+    if (req.session.logged_in) {
+      // Destroy the session and log the user out
+      req.session.destroy(() => {
+        // Respond with a 204 status (No Content) to indicate successful logout
+        res.status(204).end();
+      });
+    } else {
+      // If the user is not logged in, respond with a 404 status (Not Found)
+      res.status(404).end();
+    }
+  } catch (err) {
+    // If an error occurs during the logout process, log the error
+    console.error(err);
+  }
+});
+
 module.exports = router; // Exporting the router for use in other files
