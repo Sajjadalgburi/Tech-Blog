@@ -5,3 +5,6 @@ const { User, Post, Comment } = require('../models'); // Importing Sequelize mod
 const userData = require('./userData.json'); // Sample user data
 const postData = require('./postData.json'); // Sample post data
 const commentData = require('./commentData.json'); // Sample comment data
+
+// Define a function to seed the database
+const seedDatabase = async () => {};
