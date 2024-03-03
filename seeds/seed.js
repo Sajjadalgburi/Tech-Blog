@@ -24,4 +24,7 @@ const seedDatabase = async () => {
 
   // Seeding Posts
   const posts = await Post.bulkCreate(postData, { returning: true }); // Insert post data into database
+
+  // Seeding Comments
+  await Comment.bulkCreate(commentData); // Insert comment data into database
 };
