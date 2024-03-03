@@ -18,4 +18,7 @@ const seedDatabase = async () => {
       return { ...user, password: hashedPassword }; // Return updated user object with hashed password
     }),
   );
+
+  // Seeding Users with Hashed Passwords
+  const users = await User.bulkCreate(hashedUserData, { returning: true }); // Insert hashed user data into database
 };
