@@ -1,8 +1,8 @@
 module.exports = {
-  formatDate: (data) => {
-    const day = data.getDay();
-    const month = data.getMonth() + 1;
-    const year = data.getYear();
+  format_date: (date) => {
+    const day = date.getDay();
+    const month = date.getMonth() + 1;
+    const year = date.getFullYear();
 
     return `${day}/${month}/${year}`;
   },
