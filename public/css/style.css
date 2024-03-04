@@ -151,8 +151,17 @@ body {
 }
 
 .card {
+  transition:
+    background-color 0.4s,
+    color 0.4s,
+    box-shadow 0.4s; /* Include box-shadow in the transition */
   box-shadow: -15px 20px 0 #fff;
   background-color: #272c33;
+}
+
+.card:hover {
+  box-shadow: 15px 20px 0px grey;
+  color: black;
 }
 
 .card-title {
