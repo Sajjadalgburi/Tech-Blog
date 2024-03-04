@@ -183,6 +183,17 @@ body {
   color: #fff;
 }
 
+.comment {
+  background-color: #272c33;
+}
+
+.commentHeader {
+  font-size: 700;
+  font-size: 2rem;
+  text-align: center;
+  color: #fff;
+}
+
 /* Media query for screens 540px or below */
 @media (max-width: 540px) {
   .card-title {
