@@ -21,6 +21,10 @@ router.get('/', async (req, res) => {
       return post;
     });
 
+    console.log(
+      `user with id ${req.session.user_id} and name ${req.session.user_first_name} is logged in !`,
+    );
+
     // Log the retrieved posts
     console.log(posts);
 
@@ -38,6 +42,36 @@ router.get('/dashboard', withAuth, async (req, res) => {
   res.render('dashboard', {
     logged_in: req.session.logged_in,
   });
+});
+
+// GET route for a specific comment
+router.get('/comment/:id', withAuth, async (req, res) => {
+  try {
+    // Retrieve post data along with associated user and comment information
+    const postData = await Post.findByPk(req.params.id, {
+      include: [
+        { model: User, attributes: ['first_name'] }, // Include user's first name
+        { model: Comment, attributes: ['text'] }, // Include comment text
+      ],
+    });
+
+    if (!postData) {
+      // If post data is not found, return 404 status with message
+      return res.status(404).json({ message: 'Post not found' });
+    }
+
+    // Extracting text of each comment for the post
+    const post = postData.get({ plain: true });
+    post.commentTexts = post.comments.map((comment) => comment.text);
+
+    console.log(post); // Log the post object to console for debugging
+
+    // Render the comment view with post data and logged_in status
+    res.render('comment', { post, logged_in: req.session.logged_in });
+  } catch (err) {
+    console.error(err); // Log any errors to console
+    res.status(500).json({ message: 'Internal server error' }); // Return 500 status for internal server error
+  }
 });
 
 // GET method for login route
