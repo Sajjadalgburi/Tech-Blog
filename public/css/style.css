@@ -1,6 +1,6 @@
 /* Font Import */
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 /* Root Variables */
 :root {
   --headerBg: #161616; /* Header background color */
@@ -134,8 +134,28 @@ body {
   outline: 2px solid transparent; /* Add transparent outline */
 }
 
+.extraUserInfo {
+  font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial;
+  margin: auto;
+  max-width: 20rem;
+  margin-bottom: 2rem;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 1rem;
+  background-color: var(--bg);
+}
+
+.extraUserInfo h1 {
+  font-size: 1.4rem;
+  text-transform: capitalize;
+  font-weight: 700;
+  font-style: italic;
+  color: #fff;
+}
 /* Centering the post */
 .post {
+  font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial;
   margin: auto;
   max-width: 1000px;
 }
