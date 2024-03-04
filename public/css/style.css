@@ -140,6 +140,10 @@ body {
   max-width: 1000px;
 }
 
+.post a {
+  text-decoration: none;
+}
+
 /* Centering the post header */
 .postHeader {
   text-align: center;
