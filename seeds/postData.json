@@ -1,15 +1,17 @@
 [
   {
     "title": "10 Must-Have VS Code Extensions for Web Developers",
+    "created_on": "January 23, 2024 08:30:00",
     "user_id": 1
   },
   {
     "title": "Introduction to Python: Learn the Basics in 5 Days",
+    "created_on": "June 23, 2022 08:30:00",
     "user_id": 2
-
   },
   {
     "title": "Getting Started with Git: A Beginner's Guide",
+    "created_on": "December 23, 2023 08:30:00",
     "user_id": 3
   }
 ]
