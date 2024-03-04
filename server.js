@@ -6,6 +6,7 @@ const SequelizeStore = require('connect-session-sequelize')(session.Store);
 const sequelize = require('./config/connection');
 const dotenv = require('dotenv');
 const routes = require('./controllers');
+const helpers = require('./utils/helpers');
 
 // Load environment variables from .env file
 dotenv.config();
@@ -32,7 +33,7 @@ const sess = {
 };
 
 // Set up Handlebars
-const hbs = exphbs.create({});
+const hbs = exphbs.create({ helpers });
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 
