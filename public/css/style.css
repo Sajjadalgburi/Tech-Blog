@@ -83,23 +83,6 @@ body {
   margin-bottom: 6rem;
 }
 
-/* Media query for screens 540px or below */
-@media (max-width: 540px) {
-  nav {
-    flex-direction: column;
-    align-items: flex-start; /* Adjust alignment as needed */
-  }
-
-  nav ul {
-    flex-direction: column;
-    align-items: flex-start; /* Adjust alignment as needed */
-  }
-
-  nav ul li {
-    margin-bottom: 40px;
-  }
-}
-
 .create-post {
   color: #fff;
   background-color: var(--bg);
@@ -153,6 +136,7 @@ body {
   font-style: italic;
   color: #fff;
 }
+
 /* Centering the post */
 .post {
   font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial;
@@ -197,4 +181,37 @@ body {
 .card-text {
   font-weight: 500;
   color: #fff;
+}
+
+/* Media query for screens 540px or below */
+@media (max-width: 540px) {
+  .card-title {
+    font-size: 0.6rem; /* Decreased font size for smaller screens */
+  }
+
+  .card-text {
+    font-size: 0.85rem; /* Decreased font size for smaller screens */
+  }
+
+  .postHeader {
+    font-size: 1.1rem; /* Decreased font size for smaller screens */
+  }
+
+  .extraUserInfo h1 {
+    font-size: 1rem; /* Decreased font size for smaller screens */
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: flex-start; /* Adjust alignment as needed */
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: flex-start; /* Adjust alignment as needed */
+  }
+
+  nav ul li {
+    margin-bottom: 40px;
+  }
 }
