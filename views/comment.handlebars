@@ -1,0 +1,38 @@
+<div class='col-12 col-md-8 col-lg-8 post'>
+  <div class='card mb-5'>
+    <div class='postHeader'>
+      {{post.title}}
+    </div>
+    <div class='card-body p-2'>
+      <h6 class='card-title'>Posted by
+        {{post.user.first_name}}
+        on
+        {{format_date post.created_on}}</h6>
+      <p class='card-text'>{{post.commentTexts}}
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class='col-12 col-md-10 col-xl-8 container comment p-3'>
+
+  <div id='left-column' class='col-md-2'></div>
+  <!-- Offset column to center content -->
+  <div class='mb-3'>
+    <label class='form-label commentHeader'>Comment</label>
+    <textarea
+      class='form-control'
+      placeholder='Say something...'
+      id='addComment'
+      rows='3'
+    ></textarea>
+  </div>
+  <div id='submit-button' class='col-md-4 offset-md-4'>
+    <!-- Centered column -->
+    <button type='submit' class='btn btn-primary w-100'>Submit</button>
+  </div>
+  <div id='right-column' class='col-md-2'></div>
+  <!-- Offset column to center content -->
+</div>
+
+<script src='/js/comment.js'></script>
